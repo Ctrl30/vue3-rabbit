@@ -1,0 +1,11 @@
+// 配置vscode 自动联想
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
+    }
+}
