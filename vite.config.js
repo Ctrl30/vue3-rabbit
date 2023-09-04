@@ -21,7 +21,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+    },
+    extensions: ['.js', '.vue']
   },
   css: {
     preprocessorOptions: {
