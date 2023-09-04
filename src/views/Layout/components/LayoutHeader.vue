@@ -1,18 +1,7 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-// import LayoutHeaderUl from './LayoutHeaderUl.vue'
+import LayoutHeaderUl from './LayoutHeaderUl.vue'
 // import HeaderCart from './HeaderCart.vue'
-import { getCategoryApi } from '@/apis/layout';
 
-const categoryList = ref([])
-
-onMounted(() => {
-  getCategoryApi()
-    .then(res => {
-      categoryList.value = res.result;
-      console.log(res)
-    })
-})
 </script>
 
 <template>
@@ -22,10 +11,10 @@ onMounted(() => {
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
 
-      <!-- <LayoutHeaderUl /> -->
+      <LayoutHeaderUl />
 
       <!-- 头部购物车 -->
-      <ul class="app-header-nav">
+      <!-- <ul class="app-header-nav">
         <li class="home">
           <RouterLink to="/">首页</RouterLink>
         </li>
@@ -34,7 +23,7 @@ onMounted(() => {
             {{ item.name }}
           </RouterLink>
         </li>
-      </ul>
+      </ul> -->
 
       <div class="search">
         <i class="iconfont icon-search"></i>
